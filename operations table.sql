@@ -80,4 +80,9 @@ FROM Employees as e
 RIGHT JOIN Departments as d
 ON e.department_id = d.department_id;
 
+-- FULL JOIN
 
+SELECT * 
+FROM Employees as e
+FULL OUTER JOIN Departments as d
+ON e.department_id = d.department_id;
