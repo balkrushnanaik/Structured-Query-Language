@@ -69,6 +69,15 @@ ON e.department_id = d.department_id;
 -- LEFT JOIN
 
 SELECT * 
+FROM Departments AS d
+LEFT JOIN Employees AS e
+ON d.department_id = e.department_id;
+
+-- Right Join
+
+SELECT * 
 FROM Employees as e
-LEFT JOIN Departments as d
+RIGHT JOIN Departments as d
 ON e.department_id = d.department_id;
+
+
