@@ -61,7 +61,14 @@ SELECT * FROM Departments;
 
 -- INNER JOIN 
 
-SELECT e.emp_name, d.department_name, d.location
+SELECT *
 FROM Employees as e
 INNER JOIN Departments as d
+ON e.department_id = d.department_id;
+
+-- LEFT JOIN
+
+SELECT * 
+FROM Employees as e
+LEFT JOIN Departments as d
 ON e.department_id = d.department_id;
