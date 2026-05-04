@@ -61,9 +61,17 @@ GROUP BY course;
 
 SELECT department, AVG(marks) as Average_Marks
 FROM students_data
-GROUP BY department;
+GROUP BY department
+ORDER BY Average_Marks DESC;
 
 -- Count students by state and city
 SELECT state, city, COUNT(*) as Total_Studs
 FROM students_data
 GROUP BY state, city;
+
+
+-- Show courses with more than 2 students
+SELECT course, COUNT(*) as Total_Students
+FROM students_data
+GROUP BY course
+HAVING Total_Students >= 2;
