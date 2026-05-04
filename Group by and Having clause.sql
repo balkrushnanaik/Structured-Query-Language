@@ -57,4 +57,13 @@ SELECT course, COUNT(*) as Total_Students
 FROM students_data
 GROUP BY course;
 
+-- Find average marks for each department
 
+SELECT department, AVG(marks) as Average_Marks
+FROM students_data
+GROUP BY department;
+
+-- Count students by state and city
+SELECT state, city, COUNT(*) as Total_Studs
+FROM students_data
+GROUP BY state, city;
