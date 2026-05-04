@@ -45,5 +45,16 @@ INSERT INTO students_data VALUES
 
 SELECT * FROM students_data;
 SELECT * FROM students_data ORDER BY marks DESC;
-
 SELECT COUNT(*) as Total_Students FROM students_data ;
+
+-- Count number of students in each department
+SELECT department, COUNT(*) as Total_Students
+FROM students_data
+GROUP BY department;
+
+-- Count number of students in each course
+SELECT course, COUNT(*) as Total_Students
+FROM students_data
+GROUP BY course;
+
+
