@@ -31,3 +31,12 @@ INSERT INTO employees_data VALUES
 
 
 SELECT * FROM employees_data;
+
+-- Subqueries in SQL
+SELECT * 
+FROM employees_data
+WHERE salary > (SELECT AVG(salary) FROM employees_data)
+ORDER BY salary ASC;
+
+
+
