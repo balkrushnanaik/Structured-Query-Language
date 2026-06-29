@@ -34,5 +34,14 @@ INSERT INTO Employee_Salary (emp_id, emp_name, department, city, salary, joining
 
 SELECT * FROM Employee_Salary;
 
+-- Partition By
 SELECT emp_id,emp_name,department, SUM(Employee_Salary.salary) OVER (PARTITION BY Employee_Salary.department ) AS total_salary
+FROM Employee_Salary;
+
+-- Rows Between
+
+SELECT emp_id,emp_name,
+       AVG(emp_id) OVER (ORDER BY emp_id ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING) AS "Average",
+       SUM(emp_id) OVER (ORDER BY emp_id ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING) AS "Total",
+       COUNT(emp_id)OVER (ORDER BY emp_id ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING) AS "Count"
 FROM Employee_Salary;
