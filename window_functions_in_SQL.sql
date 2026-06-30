@@ -45,3 +45,11 @@ SELECT emp_id,emp_name,
        SUM(emp_id) OVER (ORDER BY emp_id ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING) AS "Total",
        COUNT(emp_id)OVER (ORDER BY emp_id ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING) AS "Count"
 FROM Employee_Salary;
+
+-- Rank Functions
+SELECT emp_id,emp_name,
+       ROW_NUMBER() over (ORDER BY emp_id) AS "row_number",
+       RANK() over (ORDER BY emp_id) AS "rank",
+       DENSE_RANK() over (ORDER BY emp_id) AS "dense_rank",
+       PERCENT_RANK() over (ORDER BY emp_id) AS "percentage_rank"
+FROM Employee_Salary;
