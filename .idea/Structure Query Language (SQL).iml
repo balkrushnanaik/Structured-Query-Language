@@ -3,6 +3,7 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$/../Logic Building/SQL" />
     <content url="file://$MODULE_DIR$" />
+    <content url="file://$MODULE_DIR$/../../Data Science and Machine Learning/Structure Query Language (SQL)" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
